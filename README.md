@@ -36,4 +36,46 @@ The goal is to clean the data, analyze sales performance, visualize key metrics,
 ## Key Insights
 
 - **Laptop** was the top revenue-generating product, contributing 45,000 EGP (72.5% of total revenue).
-- **Electronics** generated 57,
+- **Electronics** generated 57,000 EGP, representing 91.9% of total revenue.
+- **Cairo** accounted for 51,000 EGP (82.2% of total revenue).
+- **Card payments** represented 83.48% of total revenue.
+- **Keyboard** had the highest quantity sold, despite generating less revenue than laptops and monitors.
+
+## Business Recommendations
+
+- Prioritize laptop inventory management due to its significant contribution to revenue.
+- Explore accessory bundles and cross-selling opportunities.
+- Focus on the Cairo market while exploring growth opportunities in other cities.
+- Improve data collection to reduce missing customer and payment information.
+- Investigate invalid prices and incomplete order records before including them in business reports.
+
+## Data Quality & Limitations
+
+- The original dataset contained 13 rows, including one duplicate.
+- One record with a negative unit price was excluded from the analysis.
+- One record with a missing quantity was separated and excluded from revenue calculations.
+- Missing city and payment method values were labeled as `Unknown`.
+- The final analysis included 10 valid records.
+- The dataset covers January 2026 only and is too small to establish reliable long-term trends.
+- All data is simulated; findings do not represent an actual business.
+
+## How to Run
+
+1. Open the notebook in this repository.
+2. Open it using Google Colab.
+3. Run all cells from top to bottom.
+
+## Project Structure
+
+```text
+small-business-data-analysis/
+│
+├── README.md
+└── small-business-data-analysis.ipynb
+```
+
+## Author
+
+**MoSibai**
+
+GitHub: [MoSibai2](https://github.com/MoSibai2)
