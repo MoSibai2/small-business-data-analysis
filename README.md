@@ -1,81 +1,82 @@
 # Small Business Data Cleaning & Sales Analysis
 
-## Project Overview
+A Python workflow that takes a messy small-business sales file, cleans it, and turns it into clear sales insights and charts.
 
-This project demonstrates a practical data cleaning and exploratory data analysis workflow for a small business sales dataset using Python, Pandas, and Matplotlib.
+## The Problem
 
-The dataset is simulated and contains common data quality issues that may appear in real-world business records, including duplicate rows, missing values, and invalid prices.
+Real business sales records are rarely clean. This simulated dataset contains the issues I see most often: duplicate rows, missing values, and invalid prices. The goal is to fix them transparently and then analyze sales performance.
 
-The goal is to clean the data, analyze sales performance, visualize key metrics, and generate actionable business insights.
+## What I Did
 
-## Tools & Technologies
+1. **Inspected** structure, data types, missing values, duplicates, and invalid records.
+2. **Cleaned** by removing duplicates, labeling missing categories as `Unknown`, excluding invalid prices, and separating records with missing quantities.
+3. **Prepared** the data by converting order dates to datetime and calculating total revenue.
+4. **Analyzed** sales by product, category, city, payment method, and month.
+5. **Visualized** key findings with charts.
+6. **Recommended** practical next steps for the business.
 
-- Python
-- Pandas
-- Matplotlib
-- Google Colab
+## Data Cleaning Summary
 
-## Project Workflow
+| Step | Result |
+|---|---|
+| Original rows | 13 |
+| Duplicate rows removed | 1 |
+| Negative unit price (excluded) | 1 |
+| Missing quantity (separated) | 1 |
+| Final valid records | 10 |
 
-1. **Data Inspection:** Examined dataset structure, data types, missing values, duplicates, and invalid records.
-2. **Data Cleaning:** Removed duplicate rows, handled missing categorical values, identified invalid prices, and separated records with missing quantities.
-3. **Data Preparation:** Converted order dates into datetime format and calculated total revenue.
-4. **Exploratory Data Analysis:** Analyzed sales performance by product, category, city, payment method, and month.
-5. **Data Visualization:** Created charts to communicate important findings.
-6. **Business Insights:** Summarized findings and provided practical recommendations.
-
-## Key Business Metrics
+## Key Metrics
 
 | Metric | Result |
-|---|---:|
+|---|---|
 | Total Revenue | 62,050 EGP |
 | Total Orders | 10 |
 | Total Items Sold | 13 |
 | Average Order Value | 6,205 EGP |
 
+## Charts
+
+![Revenue by product](images/revenue_by_product.png)
+![Revenue by city](images/revenue_by_city.png)
+![Revenue by payment method](images/revenue_by_payment.png)
+
 ## Key Insights
 
-- **Laptop** was the top revenue-generating product, contributing 45,000 EGP (72.5% of total revenue).
-- **Electronics** generated 57,000 EGP, representing 91.9% of total revenue.
-- **Cairo** accounted for 51,000 EGP (82.2% of total revenue).
-- **Card payments** represented 83.48% of total revenue.
-- **Keyboard** had the highest quantity sold, despite generating less revenue than laptops and monitors.
+- **Laptop** was the top revenue product: 45,000 EGP (72.5% of revenue).
+- **Electronics** generated 57,000 EGP (91.9% of revenue).
+- **Cairo** accounted for 51,000 EGP (82.2% of revenue).
+- **Card payments** made up 83.48% of revenue.
+- **Keyboard** had the highest quantity sold despite lower revenue than laptops and monitors.
 
 ## Business Recommendations
 
-- Prioritize laptop inventory management due to its significant contribution to revenue.
-- Explore accessory bundles and cross-selling opportunities.
-- Focus on the Cairo market while exploring growth opportunities in other cities.
+- Prioritize laptop inventory, since it drives most of the revenue.
+- Explore accessory bundles and cross-selling with high-volume items like keyboards.
+- Keep focusing on Cairo while testing growth in other cities.
 - Improve data collection to reduce missing customer and payment information.
-- Investigate invalid prices and incomplete order records before including them in business reports.
+- Investigate invalid prices and incomplete orders before they reach business reports.
 
-## Data Quality & Limitations
+## Limitations
 
-- The original dataset contained 13 rows, including one duplicate.
-- One record with a negative unit price was excluded from the analysis.
-- One record with a missing quantity was separated and excluded from revenue calculations.
-- Missing city and payment method values were labeled as `Unknown`.
-- The final analysis included 10 valid records.
-- The dataset covers January 2026 only and is too small to establish reliable long-term trends.
-- All data is simulated; findings do not represent an actual business.
+- The dataset is simulated and small (10 valid records, January 2026 only), so it demonstrates the **workflow**, not real trends.
+- Findings do not represent an actual business.
+
+## Skills Demonstrated
+
+Data cleaning, data validation, exploratory data analysis, KPI calculation, data visualization, business reporting.
 
 ## How to Run
 
-1. Open the notebook in this repository.
-2. Open it using Google Colab.
-3. Run all cells from top to bottom.
+1. Open `small_business_data_analysis.ipynb` in Google Colab.
+2. Run all cells from top to bottom.
 
 ## Project Structure
 
-```text
-small-business-data-analysis/
-│
-├── README.md
-└── small-business-data-analysis.ipynb
-```
+- `README.md`
+- `small_business_data_analysis.ipynb`
+- `images/` (charts used in this README)
 
 ## Author
 
-**MoSibai**
-
+**Mohamed Sibai (MoSibai)**
 GitHub: [MoSibai2](https://github.com/MoSibai2)
